@@ -1,0 +1,17 @@
+variable "targets_resource_id" {
+  description = "(Required) The list of ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created."
+}
+
+variable "log_analytics_workspace_id" {
+  description = "(Required) Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent."
+}
+
+variable "log_analytics_destination_type" {
+  description = "type"
+  default     = "AzureDiagnostics"
+
+  validation {
+    condition     =  contains(["Dedicated", "AzureDiagnostics"], var.log_analytics_destination_type)
+    error_message = "Log analytics destination type must be one of: 'Dedicated', 'AzureDiagnostics'."
+  }
+}
