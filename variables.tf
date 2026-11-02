@@ -5,9 +5,10 @@ variable "project_code" {
     condition = contains([
       "API",
       "ALP",
+      "EOB",
       "WHS"
     ], var.project_code)
-    error_message = "project_code should be set to one of 'API', 'ALP', 'WHS'."
+    error_message = "project_code should be set to one of 'API', 'ALP', 'EOB', 'WHS'."
   }
 }
 
