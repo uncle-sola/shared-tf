@@ -31,11 +31,13 @@ variable "environment" {
       "preproduction",
       "PreProduction",
       "PREPRODUCTION",
+      "pre",
       "Prod",
       "PROD",
       "production",
       "Production",
       "PRODUCTION",
+      "prd",
       "NONPROD",
       "nonprod",
       "NonProd",
@@ -44,7 +46,7 @@ variable "environment" {
       "nonproduction"
     ], var.environment)
     # Error message will be updated once the LZ stuff has been redeployed etc. this is an interim state
-    error_message = "Environment must match one of  'Dev', 'Development', 'PreProd', 'PreProduction', 'Prod' or 'Production', 'NonProd' or 'NonProduction'."
+    error_message = "Environment must match one of  'Dev', 'Development', 'PreProd', 'PreProduction', 'pre', 'Prod', 'Production', 'prd', 'NonProd' or 'NonProduction'."
   }
 }
 

@@ -23,7 +23,8 @@ locals {
     nonproduction = "nonprod"
     NonProd       = "nonprod"
     NonProduction = "nonprod"
-
+    pre           = "pre"
+    prd           = "prd"
   }
   environment_short = {
     dev           = "dev"
